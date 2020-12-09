@@ -68,7 +68,8 @@ def count_words(list):
     for word in final_text_split:
         if word not in second_list:
             second_list.append(word)
-    for word in range(0, len(final_text_split)):
-        print(second_list[word], ':', final_text_split.count(second_list[word]))
+    for index in range(0, len(final_text_split)):
+        print(index)
+        print(second_list[index], ':', final_text_split.count(second_list[index]))
 
 count_words(final_text_split)
