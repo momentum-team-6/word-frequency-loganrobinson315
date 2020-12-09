@@ -59,11 +59,16 @@ print(data_text)
 final_text = remove_punctuation(punc, data_text)
 print(final_text)
 
-# from collections import Counter
-# def word_count(poem):
-#     with open(final_text) as f:
-#         return Counter(f.read().split())
-# print("number of words in the file : ", word_count(final_text))
-
 final_text_split = final_text.split()
 print(final_text_split)
+
+second_list = []
+
+def count_words(list):
+    for word in final_text_split:
+        if word not in second_list:
+            second_list.append(word)
+    for word in range(0, len(final_text_split)):
+        print(second_list[word], ':', final_text_split.count(second_list[word]))
+
+count_words(final_text_split)
